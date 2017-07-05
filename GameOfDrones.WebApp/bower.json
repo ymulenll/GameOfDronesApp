@@ -1,0 +1,13 @@
+{
+  "name": "asp.net",
+  "private": true,
+  "dependencies": {
+    "angular": "v1.6.5",
+    "angular-route": "v1.6.5",
+    "bootstrap": "v3.3.7",
+    "angular-mocks": "v1.6.5",
+    "angular-resource": "v1.6.5",
+    "angular-sanitize": "v1.6.5",
+    "angular-bootstrap": "v1.1.0"
+  }
+}
