@@ -223,8 +223,11 @@
   <ItemGroup>
     <Content Include="app\app.js" />
     <Content Include="app\app.config.js" />
+    <Content Include="app\game\game.controller.js" />
+    <Content Include="app\game\game.html" />
     <Content Include="app\home\home.controller.js" />
     <Content Include="app\home\home.html" />
+    <Content Include="app\services\players.factory.js" />
     <Content Include="index.html" />
     <Content Include="Scripts\angular-bootstrap\.gitignore" />
     <Content Include="Scripts\angular-bootstrap\index.js" />
