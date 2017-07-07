@@ -1,1 +1,41 @@
-﻿
+﻿<div class="container" data-ng-show="!vm.showOptions">
+    <div class="col-sm-6 form-group">
+        <div class="h1 text-left">Round {{vm.roundNumber}}</div>
+        <div class="h3">Player: {{vm.currentPlayer.name}}</div>
+        <br />
+        <div class="form-group">
+            <label class="control-label">Select move:</label>
+            <select class="form-control" ng-model="vm.selectedMove" required ng-options="move.move for move in vm.moves"></select>
+        </div>
+        <button class="btn btn-default" ng-disabled="!vm.selectedMove" ng-click="vm.play()">Play</button>
+    </div>
+    <div class="col-sm-4 col-sm-offset-2" ng-show="vm.rounds.length > 0">
+        <div class="h1">
+            <label>Score:</label>
+        </div>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Round</th>
+                    <th>Winner</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="round in vm.rounds">
+                    <td>{{ round.number }}</td>
+                    <td>{{ round.roundWinnerName }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>    
+</div>
+<div class="row space-top-40" data-ng-show="vm.showOptions">
+    <div class="col-md-12 text-center">
+        <p><button class="btn btn-default" data-ng-click="vm.goHome()">New Players</button></p>
+        <p><button class="btn btn-default" data-ng-click="vm.playAgain()">Play Again</button></p>
+        <p><button class="btn btn-default" data-ng-click="vm.customizeMoves()">Customize Moves</button></p>
+        <p><button class="btn btn-default" data-ng-click="vm.highScore()">High Score</button></p>
+    </div>
+</div>
+

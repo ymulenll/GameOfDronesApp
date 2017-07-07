@@ -16,15 +16,15 @@
         function activate() {
             Players.Reset();
 
-            vm.player1 = 'a';
-            vm.player2 = 'b';
+            vm.player1 = 'Yoelvis';
+            vm.player2 = 'Yordanka';
         }
 
         vm.startGame = function () {
             Players.Player1.name = vm.player1;
             Players.Player2.name = vm.player2;
 
-
+            $location.path('/game');
         };
     }
 })();

@@ -10,6 +10,9 @@
         $routeProvider.when('/', {
             templateUrl: 'app/home/home.html',
             controller: 'home as vm'
+        }).when('/game', {
+            templateUrl: 'app/game/game.html',
+            controller: 'game as vm'
         }).otherwise({
             redirectTo: '/'
         });

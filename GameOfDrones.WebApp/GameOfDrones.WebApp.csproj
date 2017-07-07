@@ -223,10 +223,14 @@
   <ItemGroup>
     <Content Include="app\app.js" />
     <Content Include="app\app.config.js" />
+    <Content Include="app\game\final-modal.html" />
     <Content Include="app\game\game.controller.js" />
     <Content Include="app\game\game.html" />
+    <Content Include="app\game\round-modal.controller.js" />
+    <Content Include="app\game\round-modal.html" />
     <Content Include="app\home\home.controller.js" />
     <Content Include="app\home\home.html" />
+    <Content Include="app\moves\moves.value.js" />
     <Content Include="app\services\players.factory.js" />
     <Content Include="index.html" />
     <Content Include="Scripts\angular-bootstrap\.gitignore" />
