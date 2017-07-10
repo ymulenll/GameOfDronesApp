@@ -65,8 +65,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\common\navbar.js" />
     <Content Include="app\high-score\high-score.controller.js" />
     <Content Include="app\high-score\high-score.html" />
+    <Content Include="app\moves\moves-list.controller.js" />
+    <Content Include="app\moves\moves-list.html" />
     <Content Include="app\services\player-resource.controller.js" />
     <Content Include="packages.config" />
     <Content Include="bower.json" />
