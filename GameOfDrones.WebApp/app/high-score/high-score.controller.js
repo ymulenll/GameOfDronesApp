@@ -5,13 +5,15 @@
         .module('app')
         .controller('highScore', highScore);
 
-    highScore.$inject = ['$location'];
+    highScore.$inject = ['playerResource'];
 
-    function highScore($location) {        
-        var vm = this;       
-
+    function highScore(playerResource) {        
+        var vm = this;
+        
         activate();
 
-        function activate() { }
+        function activate() {
+            vm.players = playerResource.GetAllPlayers();
+        }
     }
 })();

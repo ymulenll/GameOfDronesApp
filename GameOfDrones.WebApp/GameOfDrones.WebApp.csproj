@@ -67,7 +67,7 @@
   <ItemGroup>
     <Content Include="app\high-score\high-score.controller.js" />
     <Content Include="app\high-score\high-score.html" />
-    <Content Include="app\services\payer-resource.controller.js" />
+    <Content Include="app\services\player-resource.controller.js" />
     <Content Include="packages.config" />
     <Content Include="bower.json" />
     <Content Include="Scripts\angular-bootstrap\.bower.json" />
