@@ -4,6 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfDrones.WebApp", "GameOfDrones.WebApp\GameOfDrones.WebApp.csproj", "{7C5E6267-2B3F-408C-9752-3C0C4B9D25C2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B58BC115-3EB2-4C3D-B67A-4ABA5C36072B} = {B58BC115-3EB2-4C3D-B67A-4ABA5C36072B}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfDrones.WebApi", "GameOfDrones.WebApi\GameOfDrones.WebApi.csproj", "{B58BC115-3EB2-4C3D-B67A-4ABA5C36072B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +20,10 @@ Global
 		{7C5E6267-2B3F-408C-9752-3C0C4B9D25C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C5E6267-2B3F-408C-9752-3C0C4B9D25C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C5E6267-2B3F-408C-9752-3C0C4B9D25C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B58BC115-3EB2-4C3D-B67A-4ABA5C36072B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B58BC115-3EB2-4C3D-B67A-4ABA5C36072B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B58BC115-3EB2-4C3D-B67A-4ABA5C36072B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B58BC115-3EB2-4C3D-B67A-4ABA5C36072B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
