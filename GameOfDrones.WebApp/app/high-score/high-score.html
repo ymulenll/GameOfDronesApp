@@ -1,0 +1,19 @@
+﻿<div class="container">
+    <div class="h2">High score:</div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Ranking</th>
+                <th>Victories</th>
+                <th>Player</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="player in players | orderBy:'-gamesWon'">
+                <td>{{$index+1}}</td>
+                <td>{{player.gamesWon}}</td>
+                <td>{{player.name}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

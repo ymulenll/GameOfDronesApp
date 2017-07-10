@@ -2,7 +2,7 @@
     'use strict';
 
     angular.module('app').run(['$location', function ($location) {
-        $location.path('/');
+        $location.path('/highScore');
     }]);
 
     angular.module('app').config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider) {
@@ -13,6 +13,9 @@
         }).when('/game', {
             templateUrl: 'app/game/game.html',
             controller: 'game as vm'
+        }).when('/highScore', {
+            templateUrl: 'app/high-score/high-score.html',
+            controller: 'highScore as vm'
         }).otherwise({
             redirectTo: '/'
         });

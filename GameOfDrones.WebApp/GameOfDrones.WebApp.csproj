@@ -65,6 +65,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\high-score\high-score.controller.js" />
+    <Content Include="app\high-score\high-score.html" />
     <Content Include="packages.config" />
     <Content Include="bower.json" />
     <Content Include="Scripts\angular-bootstrap\.bower.json" />
