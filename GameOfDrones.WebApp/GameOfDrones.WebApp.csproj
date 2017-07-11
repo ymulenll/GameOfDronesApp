@@ -71,7 +71,6 @@
     <Content Include="app\moves\moves-list.controller.js" />
     <Content Include="app\moves\moves-list.html" />
     <Content Include="app\services\player-resource.controller.js" />
-    <Content Include="packages.config" />
     <Content Include="bower.json" />
     <Content Include="Scripts\angular-bootstrap\.bower.json" />
     <Content Include="Scripts\angular-bootstrap\.npmignore" />

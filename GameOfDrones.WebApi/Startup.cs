@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http;
 
 namespace GameOfDrones.WebApi
 {
@@ -29,6 +30,11 @@ namespace GameOfDrones.WebApi
             }
 
             app.UseMvc();
+
+            app.Run(async (context) =>
+            {
+                await context.Response.WriteAsync("Game of drones: Web Api started!");
+            });
         }
     }
 }

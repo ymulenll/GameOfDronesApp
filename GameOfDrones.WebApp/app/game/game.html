@@ -7,7 +7,7 @@
             <label class="control-label">Select move:</label>
             <select class="form-control" ng-model="vm.selectedMove" required ng-options="move.move for move in vm.moves"></select>
         </div>
-        <button class="btn btn-default" ng-disabled="!vm.selectedMove" ng-click="vm.play()">Play</button>
+        <button class="btn btn-primary" ng-disabled="!vm.selectedMove" ng-click="vm.play()">Play</button>
     </div>
     <div class="col-sm-4 col-sm-offset-2" ng-show="vm.rounds.length > 0">
         <div class="h1">

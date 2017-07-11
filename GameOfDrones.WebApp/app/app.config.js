@@ -6,7 +6,7 @@
     }]);
 
     angular.module('app').config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider) {
-        $httpProvider.defaults.withCredentials = false;
+        $httpProvider.defaults.withCredentials = true;
         $routeProvider.when('/', {
             templateUrl: 'app/home/home.html',
             controller: 'home as vm'
