@@ -32,27 +32,29 @@
             },
 
             GetPlayerByName() {
-                resource.getByName({ name: Players.Player1.name }, function () { }, function () { }).$promise.then(
+                resource.getByName({ name: Players.Player1.name },
                     function (response) {
                         angular.extend(Players.Player1, response);
                     },
                     function () {
-                        resource.createPlayer(Players.Player1, function () { }, function () { }).$promise.then(
+                        resource.createPlayer({ name: Players.Player1.name },
                             function (response) {
-                                angular.extend(Players.Player2, response);
-                            }
+                                angular.extend(Players.Player1, response);
+                            },
+                            function () { }
                         );
                     });
 
-                resource.getByName({ name: Players.Player2.name }, function () { }, function () { }).$promise.then(
+                resource.getByName({ name: Players.Player2.name },
                     function (response) {
                         angular.extend(Players.Player2, response);
                     },
                     function () {
-                        resource.createPlayer(Players.Player2, function () { }, function () { }).$promise.then(
+                        resource.createPlayer({ name: Players.Player2.name },
                             function (response) {
                                 angular.extend(Players.Player2, response);
-                            }
+                            },
+                            function () {}
                         );
 
                     });

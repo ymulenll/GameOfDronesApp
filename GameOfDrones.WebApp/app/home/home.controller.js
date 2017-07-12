@@ -15,9 +15,6 @@
 
         function activate() {
             Players.Reset();
-
-            vm.player1 = 'Yoe';
-            vm.player2 = 'Yordanka';
         }
 
         vm.startGame = function () {
