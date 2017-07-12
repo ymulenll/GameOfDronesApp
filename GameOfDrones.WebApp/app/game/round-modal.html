@@ -4,16 +4,6 @@
     </div>
     <div class="modal-body text-center">
         <div class="row">
-            <div class="col-sm-6 text-center">
-                <p>{{vm.model.player1.name}}</p>
-                <p>{{vm.model.move1}}</p>
-            </div>
-            <div class="col-md-6">
-                <p>{{vm.model.player2.name}}</p>
-                <p>{{vm.model.move2}}</p>
-            </div>
-        </div>
-        <div class="row">
             <p data-ng-show="vm.model.roundWinner"><strong>{{vm.model.roundWinner.name}}</strong> won this round!</p>
             <p data-ng-show="!vm.model.roundWinner">Tie!</p>
         </div>

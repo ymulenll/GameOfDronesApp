@@ -58,13 +58,14 @@
             }
             if (vm.model.winner) {
                 vm.showOptions = true;
-                openFinalModal();
+                openModal('app/game/final-modal.html');
             }
             else {
                 // show modal.
                 vm.model.roundNumber = vm.roundNumber;
                 vm.model.roundWinner = roundWinner;
-                openModal();
+
+                openModal('app/game/round-modal.html');
                         
                 vm.rounds.push({
                     number: vm.roundNumber,
@@ -91,24 +92,10 @@
             return winner;
         }
 
-        function openFinalModal() {
+        function openModal(url) {            
             $uibModal.open({
-                templateUrl: 'app/game/final-modal.html',
-                controller: 'round_modal',
-                controllerAs: 'vm',
-                size: 'sm',
-                resolve: {
-                    model: function () {
-                        return vm.model;
-                    }
-                }
-            });
-        }
-
-        function openModal() {            
-            $uibModal.open({
-                templateUrl: 'app/game/round-modal.html',
-                controller: 'round_modal',
+                templateUrl: url,
+                controller: 'modalCtr',
                 controllerAs: 'vm',
                 size: 'sm',
                 resolve: {

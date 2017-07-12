@@ -231,7 +231,7 @@
     <Content Include="app\game\final-modal.html" />
     <Content Include="app\game\game.controller.js" />
     <Content Include="app\game\game.html" />
-    <Content Include="app\game\round-modal.controller.js" />
+    <Content Include="app\game\modal.controller.js" />
     <Content Include="app\game\round-modal.html" />
     <Content Include="app\home\home.controller.js" />
     <Content Include="app\home\home.html" />
