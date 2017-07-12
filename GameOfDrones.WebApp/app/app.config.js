@@ -5,7 +5,7 @@
         $location.path('/');
     }]);
     angular.module('app').constant("Global", {
-        "webApi": "http://localhost/GameOfDrones.WebApi/api"
+        "webApi": "http://localhost:49208/api"
     });
     angular.module('app').config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider) {
         $httpProvider.defaults.withCredentials = true;

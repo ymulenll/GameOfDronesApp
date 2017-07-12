@@ -5,12 +5,12 @@
         .module('app')
         .factory('playerResource', playerResource);
 
-    playerResource.$inject = ['$resource', 'Players'];
+    playerResource.$inject = ['$resource', 'Players', 'Global'];
 
-    function playerResource($resource, Players) {
-        var resource = $resource('http://localhost:49208/api/Player/:id', null, {
+    function playerResource($resource, Players, Global) {
+        var resource = $resource(Global.webApi + '/Player/:id', null, {
             'getByName': {
-                url: 'http://localhost:49208/api/Player/GetByName/:name',
+                url: Global.webApi + '/Player/GetByName/:name',
                 method: 'GET',
                 isArray: false
             },
