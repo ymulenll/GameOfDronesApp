@@ -17,6 +17,8 @@ namespace GameOfDrones.WebApi
             services.AddDbContext<ApplicationDbContext>(opt => opt.UseInMemoryDatabase());
             // Add framework services.
             services.AddMvc();
+
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -28,6 +30,8 @@ namespace GameOfDrones.WebApi
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
             app.UseMvc();
 

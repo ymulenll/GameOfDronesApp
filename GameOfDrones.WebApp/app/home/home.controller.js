@@ -5,9 +5,9 @@
         .module('app')
         .controller('home', home);
 
-    home.$inject = ['$location', 'Players'];
+    home.$inject = ['$location', 'Players', 'playerResource'];
 
-    function home($location, Players) {
+    function home($location, Players, playerResource) {
         
         var vm = this;
 
@@ -16,7 +16,7 @@
         function activate() {
             Players.Reset();
 
-            vm.player1 = 'Yoelvis';
+            vm.player1 = 'Yoe';
             vm.player2 = 'Yordanka';
         }
 
@@ -24,6 +24,8 @@
             Players.Player1.name = vm.player1;
             Players.Player2.name = vm.player2;
 
+            var player = playerResource.GetPlayerByName();
+            
             $location.path('/game');
         };
     }

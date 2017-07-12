@@ -10,12 +10,14 @@
     function player() {
         var service = {
             Player1: {
+                id: 0,
                 number: 1,
                 name: '',
                 score: 0,
                 gamesWon: 0
             },
             Player2: {
+                id: 0,
                 number: 2,
                 name: '',
                 score: 0,

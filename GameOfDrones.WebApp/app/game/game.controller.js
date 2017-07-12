@@ -5,9 +5,9 @@
         .module('app')
         .controller('game', game);
 
-    game.$inject = ['$location', 'Players', 'Moves', '$uibModal'];
+    game.$inject = ['$location', 'Players', 'Moves', '$uibModal', 'playerResource'];
 
-    function game($location, Players, Moves, $uibModal) {
+    function game($location, Players, Moves, $uibModal, playerResource) {
         var vm = this;
         activate();
         function activate() {
@@ -19,7 +19,7 @@
             vm.rounds = [];
             vm.showOptions = false;
 
-            vm.scoreToWin = 2;
+            vm.scoreToWin = 3;
         }
         
         vm.play = function () {
@@ -49,10 +49,12 @@
             if (Players.Player1.score === vm.scoreToWin) {
                 Players.Player1.gamesWon++;
                 vm.model.winner = Players.Player1;
+                playerResource.SavePlayer(Players.Player1);
             }
             else if (Players.Player2.score === vm.scoreToWin) {
                 Players.Player2.gamesWon++;
                 vm.model.winner = Players.Player2;
+                playerResource.SavePlayer(Players.Player2);
             }
             if (vm.model.winner) {
                 vm.showOptions = true;
@@ -123,7 +125,7 @@
         };
 
         vm.customizeMoves = function () {
-            $location.path('/customizeMoves');
+            $location.path('/moves-list');
         };
 
         vm.playAgain = function () {
@@ -131,7 +133,7 @@
         };
 
         vm.highScore = function () {
-            $location.path('/highScore');
+            $location.path('/high-score');
         };
     }
 })();

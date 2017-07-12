@@ -18,7 +18,7 @@ namespace GameOfDrones.WebApi.Controllers
             this.context = context;
             if (!context.Players.Any())
             {
-                this.context.Players.AddRange(new Player { Name = "Yoe", GamesWon = 3 }, new Player { Name = "Mul", GamesWon = 2 });
+                this.context.Players.AddRange(new Player { Name = "TestPlayer1", GamesWon = 3 }, new Player { Name = "TestPlayer2", GamesWon = 2 });
                 this.context.SaveChanges();
             }
         }
